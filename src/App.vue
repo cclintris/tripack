@@ -20,6 +20,18 @@
             <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
             <el-dropdown-item icon="el-icon-circle-check-outline">蚵仔煎</el-dropdown-item>
           </el-dropdown-menu>
+        </el-dropdown> -->
+        <el-dropdown trigger="click" class="setting">
+          <span class="header-setting">
+            設置<i class="el-icon-arrow-down el-icon--right"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-circle-plus">狮子头</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-circle-plus-outline">螺蛳粉</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
+            <el-dropdown-item icon="el-icon-circle-check-outline">蚵仔煎</el-dropdown-item>
+          </el-dropdown-menu>
         </el-dropdown>
         <span class="title">TRIPACK</span>
         <el-dropdown trigger="click" class="info">
