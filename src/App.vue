@@ -20,7 +20,7 @@
             <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
             <el-dropdown-item icon="el-icon-circle-check-outline">蚵仔煎</el-dropdown-item>
           </el-dropdown-menu>
-        </el-dropdown> -->
+        </el-dropdown>
         <el-dropdown trigger="click" class="setting">
           <span class="header-setting">
             設置<i class="el-icon-arrow-down el-icon--right"></i>
