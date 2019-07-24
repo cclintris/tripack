@@ -1,5 +1,5 @@
 <template>
-    <div class="hello">hello</div>
+    <div>NewTravel</div>
 </template>
 
 <script>
@@ -9,8 +9,5 @@ export default {
 </script>
 
 <style>
-.hello{
-    font-size: 30px;
-    color: black;
-}
+
 </style>
