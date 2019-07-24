@@ -6,6 +6,11 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/Layout',
+      name: 'Layout',
+      component: () => import('./views/Layout.vue')
+    },
+    {
       path: '/Home',
       name: 'Home',
       component: () => import('./views/Home.vue')

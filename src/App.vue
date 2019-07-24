@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <layout/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,10 +9,10 @@ import axios from 'axios'
 
 export default {
   components: {
-    layout: () => import('@/layout/layout.vue')
+    layout: () => import('./views/Layout.vue')
   },
   mounted() {
-    this.$router.push('/home');
+    this.$router.push('/Layout');
   }
 }
 </script>
