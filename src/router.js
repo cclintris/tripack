@@ -39,6 +39,11 @@ export default new Router({
       path: '/NewTravel',
       name: 'NewTravel',
       component: () => import('./views/NewTravel.vue')
+    },
+    {
+      path: '/Comment',
+      name: 'Comment',
+      component: () => import('./views/Comment.vue')
     }
   ]
 })

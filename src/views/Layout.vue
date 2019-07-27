@@ -4,7 +4,7 @@
       <el-header :style="{height: 'none', padding: 0}">
         <el-dropdown trigger="click" class="setting">
           <div class="header-setting">
-            設置<i class="el-icon-arrow-down el-icon--right"></i>
+            <i style="font-size: 30px; line-height: 66.73px" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
@@ -17,7 +17,7 @@
         <span class="title">TRIPACK</span>
         <el-dropdown trigger="click" class="info">
           <div class="header-setting">
-            詳情<i class="el-icon-menu"></i>
+            <i style="font-size: 30px; line-height: 66.73px" class="el-icon-picture-outline-round"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
@@ -30,24 +30,19 @@
       </el-header>
       
       <el-main :style="{height: 'none', padding: 0}">
-        <div>
-          <el-input placeholder="隨便看看" prefix-icon="el-icon-search" v-model="input" class="main-input"></el-input>
-        </div>
-        <div class="recommend">
-          <span class="recommend-text">熱搜推薦:</span>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '5px 0 0 5px'}" type="primary" round>環島</el-button>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '5px 0 0 5px'}" type="primary" round>台北</el-button>
-        </div>
-        <div class="ads">廣告</div>
-        <div class="main-main"></div>
-        <div class="main-main"></div>
+        <div class="main-context"></div>
+        <div class="main-context"></div>
+        <div class="main-context"></div>
+        <div class="main-context"></div>
       </el-main>
 
       <el-footer :style="{height: 'none', padding: 0}">
-        <el-button :style="{padding: '5px 10px', float: 'left', margin: '10px 0 0 5px'}" type="primary" icon="el-icon-user-solid" size="small" @click="jump_Customize() ">客服</el-button>
-        <el-button :style="{padding: '5px 10px', float: 'right', margin: '11px 5px 0 0'}" type="primary" size="mini" @click="jump_NewTravel()">新建旅行</el-button>
-        <el-button :style="{padding: '5px 10px', float: 'right', margin: '11px 5px 0 0'}" type="primary" size="mini" @click="jump_TravelDiary()">旅行日記</el-button>
-        <el-button :style="{padding: '5px 10px', float: 'right', margin: '11px 5px 0 0'}" type="primary" size="mini" @click="jump_My()">我的</el-button>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="primary" icon="el-icon-house" @click="jump_Layout() "></el-button>
+        <div class="footer-icon-text-1">主頁</div>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="primary" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
+        <div class="footer-icon-text-2">大眾評</div>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="primary" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
+        <div class="footer-icon-text-3">旅行日記</div>
       </el-footer>
     </el-container>
   </div>
@@ -60,20 +55,19 @@ export default {
       input: ''
     }
   },
-  methods: {
-    jump_Customize() {
-        this.$router.push({path: '/CustomerService'})
+  computed: {
+    jump_Layout() {
+        this.$router.push({path: '/Layout'})
     },
-    jump_NewTravel() {
-        this.$router.push({path: '/NewTravel'})
+    jump_Comment() {
+        this.$router.push({path: '/Comment'})
     },
     jump_TravelDiary() {
         this.$router.push({path: '/TravelDiary'})
     },
-    jump_My() {
+    /*jump_My() {
         this.$router.push({path: '/My'})
-    }
-
+    }*/
   }
 }
 </script>
@@ -100,7 +94,7 @@ html,body,#app {
 }
 
 .el-header {
-  height: 7.5%;
+  height: 10%;
   background-color:blue;
   color: white;
   padding: 0;
@@ -127,57 +121,79 @@ html,body,#app {
 .header-setting {
   display: inline-block;
   line-height: 100%;
-  font-size: 15px;
+  font-size: 20px;
   color: white;
-}
-
-.el-icon-setting {
-  color: white;
-  font-size: 15px;
 }
 
 .title {
   display: block;
-  font-size: 30px;
-  display: block;
+  font-size: 45px;
   text-align: center;
   margin: 5px auto 0;
 }
 
 .el-main {
-  height: 85%;
+  height: 80%;
   background-color: green;
 }
 
-.recommend {
-  height: 40px;
-  border-bottom-style: solid;
-  border-bottom-color: white;
-}
-
-.recommend-text {
+.main-context {
+  height: 200px;
+  width: 150px;
+  background-color: red;
   float: left;
-  margin-left: 5px;
-  margin-top: 10px;
-  color: white;
-}
-
-.ads {
-  height: 90px;
-  border-bottom-style: solid;
-  border-bottom-color: white;
-}
-
-.main-main {
-  height: 86px;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
   border-style: solid;
+  border-width: 2px;
   border-color: white;
-  margin: 5px 5px;
 }
 
 .el-footer {
-  height: 7.5%;
+  height: 10%;
   background-color: #409EFF;
   padding: 0;
+}
+
+.el-icon-house {
+  font-size: 36px;
+}
+
+.el-icon-medal-1 {
+  font-size: 36px;
+}
+
+.el-icon-notebook-1 {
+  font-size: 36px;
+}
+
+.footer-icon-text-1 {
+  position: absolute;
+  left: 48px;
+  margin-top: 42px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-icon-text-2 {
+  position: absolute;
+  left: 162px;
+  margin-top: 42px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-icon-text-3 {
+  position: absolute;
+  left: 283px;
+  margin-top: 42px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
 }
 </style>
