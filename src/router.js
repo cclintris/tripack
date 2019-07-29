@@ -11,11 +11,6 @@ export default new Router({
       component: () => import('./views/Layout.vue')
     },
     {
-      path: '/Home',
-      name: 'Home',
-      component: () => import('./views/Home.vue')
-    },
-    {
       path: '/Detail',
       name: 'Detail',
       component: () => import('./views/Detail.vue')
@@ -44,6 +39,11 @@ export default new Router({
       path: '/Comment',
       name: 'Comment',
       component: () => import('./views/Comment.vue')
+    },
+    {
+      path: '/Ask',
+      name: 'Ask',
+      component: () => import('./views/Ask.vue')
     }
   ]
 })

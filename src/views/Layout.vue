@@ -4,20 +4,19 @@
       <el-header :style="{height: 'none', padding: 0}">
         <el-dropdown trigger="click" class="setting">
           <div class="header-setting">
-            <i style="font-size: 30px; line-height: 66.73px" class="el-icon-more"></i>
+            <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-circle-plus">狮子头</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-circle-plus-outline">螺蛳粉</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-circle-check-outline">蚵仔煎</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">設定</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text">版本信息</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text">關於我們</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">bug反饋</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
         <span class="title">TRIPACK</span>
         <el-dropdown trigger="click" class="info">
           <div class="header-setting">
-            <i style="font-size: 30px; line-height: 66.73px" class="el-icon-picture-outline-round"></i>
+            <i style="font-size: 30px; line-height: 100px; color: #3981D3" class="el-icon-picture-outline-round"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
@@ -30,18 +29,21 @@
       </el-header>
       
       <el-main :style="{height: 'none', padding: 0}">
-        <div class="main-context"></div>
-        <div class="main-context"></div>
-        <div class="main-context"></div>
-        <div class="main-context"></div>
+        <div>
+          <img src="../assets/layout-ornament.png" width="300px" height="250px">
+        </div>
+        <el-button class="main-button-1" @click="jump_Ask()">
+          <span white-space: prewrap>規劃專屬旅行路線</span>
+        </el-button>
+        <el-button class="main-button-2">查看我保存的路線</el-button>
       </el-main>
 
       <el-footer :style="{height: 'none', padding: 0}">
-        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="primary" icon="el-icon-house" @click="jump_Layout() "></el-button>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
         <div class="footer-icon-text-1">主頁</div>
-        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="primary" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
         <div class="footer-icon-text-2">大眾評</div>
-        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="primary" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
+        <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
         <div class="footer-icon-text-3">旅行日記</div>
       </el-footer>
     </el-container>
@@ -50,11 +52,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      input: ''
-    }
-  },
   computed: {
     jump_Layout() {
         this.$router.push({path: '/Layout'})
@@ -65,9 +62,9 @@ export default {
     jump_TravelDiary() {
         this.$router.push({path: '/TravelDiary'})
     },
-    /*jump_My() {
-        this.$router.push({path: '/My'})
-    }*/
+    jump_Ask() {
+        this.$router.push({path: '/Ask'})
+    }
   }
 }
 </script>
@@ -82,7 +79,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #FBFBFB;
 }
 
 html,body,#app {
@@ -94,8 +91,8 @@ html,body,#app {
 }
 
 .el-header {
-  height: 10%;
-  background-color:blue;
+  height: 15%;
+  background-color: #FBFBFB;
   color: white;
   padding: 0;
 }
@@ -106,7 +103,7 @@ html,body,#app {
   left: 0;
   width: 20%;
   height: 7.5%;
-  color: white;
+  color: #FBFBFB;
 }
 
 .el-header .info {
@@ -115,46 +112,70 @@ html,body,#app {
   right: 0;
   width: 15%;
   height: 7.5%;
-  color: white;
+  color: #FBFBFB;
 }
 
 .header-setting {
   display: inline-block;
   line-height: 100%;
   font-size: 20px;
-  color: white;
+  color: #FBFBFB;
+}
+
+.dropdown-text {
+  font-size: 20px;
 }
 
 .title {
   display: block;
-  font-size: 45px;
+  font-size: 55px;
   text-align: center;
-  margin: 5px auto 0;
+  margin-top: 5px;
+  margin-left: 8px;
+  color: #3981D3;
+  line-height: 100px;
 }
 
 .el-main {
-  height: 80%;
-  background-color: green;
+  height: 75%;
+  background-color: #FBFBFB;
 }
 
-.main-context {
+.main-button-1 {
   height: 200px;
   width: 150px;
-  background-color: red;
+  background-color: #F7DD7D;
   float: left;
   position: relative;
-  left: 30px;
+  left: 25px;
   top: 20px;
   margin-bottom: 20px;
-  margin-right: 10px;
+  margin-right: 17px;
   border-style: solid;
   border-width: 2px;
   border-color: white;
+  color: #909399;
+}
+
+.main-button-2 {
+  height: 200px;
+  width: 150px;
+  background-color: #DFECFB;
+  float: left;
+  position: relative;
+  left: 25px;
+  top: 20px;
+  margin-bottom: 20px;
+  margin-right: 17px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  color: #909399;
 }
 
 .el-footer {
   height: 10%;
-  background-color: #409EFF;
+  background-color: #3981D3;
   padding: 0;
 }
 
@@ -174,7 +195,7 @@ html,body,#app {
   position: absolute;
   left: 48px;
   margin-top: 42px;
-  color: white;
+  color: #FBFBFB;
   font-size: 13px;
   font-weight: bold;
 }
@@ -183,7 +204,7 @@ html,body,#app {
   position: absolute;
   left: 162px;
   margin-top: 42px;
-  color: white;
+  color: #FBFBFB;
   font-size: 13px;
   font-weight: bold;
 }
@@ -192,8 +213,13 @@ html,body,#app {
   position: absolute;
   left: 283px;
   margin-top: 42px;
-  color: white;
+  color: #FBFBFB;
   font-size: 13px;
   font-weight: bold;
+}
+
+.el-button--info {
+  background-color: #3981D3;
+  border-color: #3981D3;
 }
 </style>
