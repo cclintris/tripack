@@ -1,6 +1,7 @@
 <template>
     <el-container>
         <el-main>
+            <span class="header">路線規劃</span>
             <div class="main-background"></div>
             <div class="main-content">馬上生成專屬旅行路線!
                 <div class="content-1">
@@ -56,6 +57,10 @@ export default {
     background-color: #FBFBFB;
 }
 
+.header {
+    font-size: 30px;
+}
+
 .el-main {
     background-color: #FBFBFB;
 }
@@ -74,7 +79,7 @@ export default {
 
 .main-content {
     height: 350px;
-    margin-top: 150px;
+    margin-top: 160px;
     margin-left: 10px;
     color: #3981D3;
     font-size: 30px;

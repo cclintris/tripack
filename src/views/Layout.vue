@@ -33,9 +33,14 @@
           <img src="../assets/layout-ornament.png" width="300px" height="250px">
         </div>
         <el-button class="main-button-1" @click="jump_Ask()">
-          <span white-space: prewrap>規劃專屬旅行路線</span>
+          <span class="main-button-text">規劃專屬</span>
+          <span class="main-button-text">旅行路線</span>
         </el-button>
-        <el-button class="main-button-2">查看我保存的路線</el-button>
+        <el-button class="main-button-2">
+          <span class="main-button-text">查看</span>
+          <span class="main-button-text">我保存的</span>
+          <span class="main-button-text">路線</span>
+        </el-button>
       </el-main>
 
       <el-footer :style="{height: 'none', padding: 0}">
@@ -129,8 +134,6 @@ html,body,#app {
   display: block;
   font-size: 55px;
   text-align: center;
-  margin-top: 5px;
-  margin-left: 8px;
   color: #3981D3;
   line-height: 100px;
 }
@@ -170,6 +173,16 @@ html,body,#app {
   border-width: 2px;
   border-color: white;
   color: #909399;
+}
+
+.main-button-text {
+  display: block;
+  height: 50px;
+  font-size: 25px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #3981D3;
 }
 
 .el-footer {

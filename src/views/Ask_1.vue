@@ -1,13 +1,19 @@
 <template>
     <el-container>
         <el-main>
+            <span class="header">路線規劃</span>
             <div class="main-background">
                 <span class="main-context">是否有已定景點/餐廳/旅館?</span>
-                <el-button></el-button>
-                <el-button></el-button>    
+                <div class="buttons">
+                    <el-button type="primary" round icon="el-icon-check">是</el-button>
+                    <el-button type="primary" round icon="el-icon-close">否</el-button>
+                    <div class="previous">
+                        <el-button type="primary" icon="el-icon-back" @click="jump_Ask()">上一頁</el-button>
+                    </div>
+                </div>   
             </div>
         </el-main>
-        <el-footer>
+        <el-footer :style="{height: 'none', padding: 0}">
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
           <div class="footer-icon-text-1">主頁</div>
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
@@ -29,6 +35,9 @@ export default {
         },
         jump_TravelDiary() {
             this.$router.push({path: '/TravelDiary'})
+        },
+        jump_Ask() {
+            this.$router.push({path: '/Ask'})
         }
     }
 }
@@ -41,6 +50,10 @@ export default {
 
 .el-main {
     background-color: #FBFBFB;
+}
+
+.header {
+    font-size: 30px;
 }
 
 .main-background {
@@ -65,7 +78,6 @@ export default {
 .el-footer {
     height: 10%;
     background-color: #3981D3;
-    padding: 0;
 }
 
 .el-icon-house {
@@ -105,5 +117,25 @@ export default {
     color: #FBFBFB;
     font-size: 13px;
     font-weight: bold;
+}
+
+.buttons {
+    position: absolute;
+    right: 85px;
+    top: 260px;
+    width: 200px;
+    height: 100px;
+}
+
+.is-round {
+    font-size: 20px;
+}
+
+.previous {
+    width: 50px;
+    height: 30px;
+    position: relative;
+    right: 35px;
+    top: 130px;
 }
 </style>
