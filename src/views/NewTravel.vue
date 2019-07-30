@@ -1,6 +1,6 @@
 <template>
     <el-container>
-        <div>是否有已定景點/餐廳/旅館</div>
+        NewTravel
     </el-container>
 </template>
 
