@@ -17,7 +17,7 @@
             <el-main :style="{width: 'none'}">
                 <router-view></router-view>
                 <div class="main-button">
-                    <el-button class="main-button-1" type="danger">上一頁</el-button>
+                    <el-button class="main-button-1" type="danger" @click="jump_Ask_1()">上一頁</el-button>
                     <el-button class="main-button-1" type="danger" @click="jump_Complete()">完成</el-button>
                 </div>
             </el-main>
@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-header {
     height: 15%;
     background-color: green;

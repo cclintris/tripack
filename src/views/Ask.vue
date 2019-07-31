@@ -35,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .el-container {
     background-color: #FBFBFB;
 }
