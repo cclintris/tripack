@@ -11,19 +11,9 @@ export default new Router({
       component: () => import('./views/Layout.vue')
     },
     {
-      path: '/Detail',
-      name: 'Detail',
-      component: () => import('./views/Detail.vue')
-    },
-    {
       path: '/CustomerService',
       name: 'CustomerService',
       component: () => import('./views/CustomerService.vue')
-    },
-    {
-      path: '/My',
-      name: 'My',
-      component: () => import('./views/My.vue')
     },
     {
       path: '/TravelDiary',
@@ -36,19 +26,46 @@ export default new Router({
       component: () => import('./views/NewTravel.vue')
     },
     {
-      path: '/Comment',
-      name: 'Comment',
-      component: () => import('./views/Comment.vue')
-    },
-    {
       path: '/Ask',
       name: 'Ask',
       component: () => import('./views/Ask.vue')
     },
     {
-      path: '/Ask_1',
-      name: 'Ask_1',
-      component: () => import('./views/Ask_1.vue')
+      path: '/Ask-1',
+      name: 'Ask-1',
+      component: () => import('./views/Ask-1.vue')
+    },
+    {
+      path: '/Choose',
+      name: 'Choose',
+      component: () => import('./views/Choose.vue'),
+      children: [
+        {
+          path: '/ViewPoints',
+          name: 'ViewPoints',
+          component: () => import('./components/ViewPoints.vue')
+        },
+        {
+          path: '/Restaurants',
+          name: 'Restaurants',
+          component: () => import('./components/Restaurants.vue')
+        },
+        {
+          path: '/Resorts',
+          name: 'Resorts',
+          component: () => import('./components/Resorts.vue')
+        }
+      ]
+    },
+    {
+      path: '/Complete',
+      name: 'Complete',
+      component: () => import('./views/Complete.vue')
+    },
+    {
+      path: '/Saved',
+      name: 'Saved',
+      component: () => import('./views/Saved.vue')
     }
   ]
 })

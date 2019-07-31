@@ -1,5 +1,5 @@
 <template>
-    <div>Comment</div>
+    <div>ViewPoints</div>
 </template>
 
 <script>

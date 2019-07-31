@@ -1,5 +1,5 @@
 <template>
-    <div>My</div>
+    <div>Resorts</div>
 </template>
 
 <script>
