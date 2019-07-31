@@ -26,6 +26,11 @@ export default new Router({
       component: () => import('./views/NewTravel.vue')
     },
     {
+      path: '/Comment',
+      name: 'Comment',
+      component: () => import('./views/Comment.vue')
+    },
+    {
       path: '/Ask',
       name: 'Ask',
       component: () => import('./views/Ask.vue')
