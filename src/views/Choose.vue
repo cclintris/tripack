@@ -45,7 +45,7 @@ export default {
         },
         jump_Ask_1() {
             this.$router.push({path: '/Ask-1'})
-        }, //沒辦法成功渲染?
+        },
         jump_Complete() {
             this.$router.push({path: '/Complete'})
         }
@@ -56,16 +56,16 @@ export default {
 <style scoped>
 .el-header {
     height: 15%;
-    background-color: green;
+    background-color: #C4A283;
 }
 
 .el-aside {
-    background-color: red;
+    background-color: #FCFBF3;
     width: 25%;
 }
 
 .el-main {
-    background-color: blue;
+    background-color: gray;
     height: 100%;
     padding: 0px;
 }
@@ -91,7 +91,6 @@ export default {
 
 .el-input__inner {
     width: 90%;
-    height: 40px;
 }
 
 .el-input__icon {
@@ -104,6 +103,7 @@ export default {
     margin-top: 20px;
     font-size: 20px;
     white-space: normal;
+    background-color: #F6CF40;
 }
 
 .el-button+.el-button {
@@ -124,5 +124,6 @@ export default {
     padding: 0;
     font-size: 15px;
     white-space: nowrap;
+    background-color: #FDECB4;
 }
 </style>

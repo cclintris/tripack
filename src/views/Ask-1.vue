@@ -77,7 +77,7 @@ export default {
     width: 250px;
     height: 80px;
     position: relative;
-    right: 30px;
+    right: 25px;
     top: 55px;
 }
 </style>

@@ -44,23 +44,23 @@ export default new Router({
       path: '/Choose',
       name: 'Choose',
       component: () => import('./views/Choose.vue'),
-      children: [
-        {
-          path: '/ViewPoints',
-          name: 'ViewPoints',
-          component: () => import('./components/ViewPoints.vue')
-        },
-        {
-          path: '/Restaurants',
-          name: 'Restaurants',
-          component: () => import('./components/Restaurants.vue')
-        },
-        {
-          path: '/Resorts',
-          name: 'Resorts',
-          component: () => import('./components/Resorts.vue')
-        }
-      ]
+        children: [
+          {
+            path: '/ViewPoints',
+            name: 'ViewPoints',
+            component: () => import('./components/ViewPoints.vue')
+          },
+          {
+            path: '/Restaurants',
+            name: 'Restaurants',
+            component: () => import('./components/Restaurants.vue')
+          },
+          {
+            path: '/Resorts',
+            name: 'Resorts',
+            component: () => import('./components/Resorts.vue')
+          }
+        ]
     },
     {
       path: '/Complete',

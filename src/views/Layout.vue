@@ -42,7 +42,6 @@
           <span class="main-button-text">路線</span>
         </el-button>
       </el-main>
-
       
       <el-footer :style="{height: 'none', padding: 0}">
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
