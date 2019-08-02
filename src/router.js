@@ -60,7 +60,7 @@ export default new Router({
             name: 'Resorts',
             component: () => import('./components/Resorts.vue')
           }
-        ]
+      ]
     },
     {
       path: '/Complete',
@@ -71,6 +71,26 @@ export default new Router({
       path: '/Saved',
       name: 'Saved',
       component: () => import('./views/Saved.vue')
+    },
+    {
+      path: '/Settings',
+      name: 'Settings',
+      component: () => import('./views/Settings.vue')
+    },
+    {
+      path: '/Version',
+      name: 'Version',
+      component: () => import('./views/Version.vue')
+    },
+    {
+      path: '/AboutUs',
+      name: 'AboutUs',
+      component: () => import('./views/AboutUs.vue')
+    },
+    {
+      path: '/Bug',
+      name: 'Bug',
+      component: () => import('./views/Bug.vue')
     }
   ]
 })

@@ -7,10 +7,11 @@
             <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">設定</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text">版本信息</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text">關於我們</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">bug反饋</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jump_Settings()">設定</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text" @click.native="jump_Version()">版本信息</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text" @click.native="jump_AboutUs()">關於我們</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">bug反饋</el-dropdown-item>
+            <el-dropdown-item divided class="dropdown-text">cacatea</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
         <span class="title">TRIPACK</span>
@@ -56,7 +57,6 @@
 </template>
 
 <script>
-
 export default {
   computed: {
     jump_Ask() {
@@ -73,6 +73,18 @@ export default {
     },
     jump_Saved() {
         this.$router.push({path: '/Saved'})
+    },
+    jump_Settings() {
+        this.$router.push({path: '/Settings'})
+    },
+    jump_Version() {
+        this.$router.push({path: '/Version'})
+    },
+    jump_AboutUs() {
+        this.$router.push({path: '/AboutUs'})
+    },
+    jump_Bug() {
+        this.$router.push({path: '/Bug'})
     }
   }
 }

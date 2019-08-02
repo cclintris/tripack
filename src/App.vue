@@ -9,7 +9,7 @@ import axios from 'axios'
 
 export default {
   components: {
-    layout: () => import('./views/Layout.vue'),
+    layout: () => import('./views/Layout.vue')
   },
   mounted() {
     this.$router.push('/Layout');

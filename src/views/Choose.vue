@@ -65,7 +65,7 @@ export default {
 }
 
 .el-main {
-    background-color: gray;
+    background-color: lightblue;
     height: 100%;
     padding: 0px;
 }
