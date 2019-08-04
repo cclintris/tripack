@@ -60,7 +60,7 @@ export default new Router({
             name: 'Resorts',
             component: () => import('./components/Resorts.vue')
           }
-      ]
+        ]
     },
     {
       path: '/Complete',
