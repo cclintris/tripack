@@ -3,24 +3,22 @@
         <el-header :style="{height: 'none', padding: 0}">
             <div class="choose-header">
                 <div class="header-part1">
-                    <span class="choose-title">選擇</span>
+                    <span class="choose-title">Let's begin</span>
                 </div>
-                <el-input placeholder="搜尋" prefix-icon="el-icon-search" v-model="search"></el-input>
+                <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
             </div>
         </el-header>
         <el-container>
             <el-aside :style="{width: 'none'}">
-                <el-tabs tab-position="left">
-                    <el-tab-pane label="景點"></el-tab-pane>
-                    <el-tab-pane label="餐廳"></el-tab-pane>
-                    <el-tab-pane label="飯店"></el-tab-pane>
-                </el-tabs>
+                <el-button type="primary" @click="jump_ViewPoints()">view</el-button>
+                <el-button type="primary" @click="jump_Restaurants()">dine</el-button>
+                <el-button type="primary" @click="jump_Resorts()">hotel</el-button>
             </el-aside>
             <el-main :style="{width: 'none'}">
                 <router-view></router-view>
                 <div class="main-button">
-                    <el-button class="main-button-1" type="danger" @click="jump_Ask_1()">上一頁</el-button>
-                    <el-button class="main-button-1" type="danger" @click="jump_Complete()">完成</el-button>
+                    <el-button class="main-button-1" type="danger" @click="jump_Ask_1()">Last</el-button>
+                    <el-button class="main-button-1" type="danger" @click="jump_Complete()">Done</el-button>
                 </div>
             </el-main>
         </el-container>
@@ -58,16 +56,17 @@ export default {
 <style scoped>
 .el-header {
     height: 15%;
-    background-color: #C4A283;
+    background-color: #FBF6EB;
+    color: #755447;
 }
 
 .el-aside {
-    background-color: #FCFBF3;
+    background-color: lightyellow;
     width: 25%;
 }
 
 .el-main {
-    background-color: lightblue;
+    background-color: lightyellow;
     height: 100%;
     padding: 0px;
 }
@@ -84,11 +83,14 @@ export default {
     display: block;
     margin-top: 5px;
     font-size: 30px;
+    font-family: 'Ink Free';
+    font-weight: bold;
 }
 
 .el-input {
     width: 90%;
     height: 40px;
+    margin-top: -5px;
 }
 
 .el-input__inner {
@@ -100,12 +102,12 @@ export default {
 }
 
 .el-button {
-    width: 70px;
-    height: 70px;
+    height: 50px;
     margin-top: 20px;
-    font-size: 20px;
-    white-space: normal;
-    background-color: #F6CF40;
+    font-size: 18px;
+    background-color: #FDECB4;
+    border: 0;
+    color: #3981D3;
 }
 
 .el-button+.el-button {
@@ -127,5 +129,7 @@ export default {
     font-size: 15px;
     white-space: nowrap;
     background-color: #FDECB4;
+    font-family: 'Ink Free';
+    font-weight: bold;
 }
 </style>
