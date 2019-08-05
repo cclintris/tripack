@@ -1,17 +1,17 @@
 <template>
     <el-container>
         <el-main>
-            <span class="header">路線規劃</span>
+            <span class="header">customize your trip</span>
             <div class="main-background"></div>
-            <div class="main-content">馬上生成專屬旅行路線!
-                <div class="content-1">
-                    旅行時長<el-input v-model="day"></el-input>天<el-input v-model="night"></el-input>夜
+            <div class="main-content">make your trip right now!
+                <div class="content-2">
+                    travel time<el-input v-model="day"></el-input>days<el-input v-model="night"></el-input>nights
                 </div>
                 <div class="content-1">
-                    消費預算<el-input v-model="budget"></el-input>RMB
+                    budget<el-input v-model="budget"></el-input>RMB
                 </div>
                 <span class="button">
-                    <el-button size="mini" @click="jump_Ask_1()">下一步<i class="el-icon-right el-icon--right"></i></el-button>
+                    <el-button size="mini" @click="jump_Ask_1()">next<i class="el-icon-right el-icon--right"></i></el-button>
                 </span>
             </div>        
         </el-main>
@@ -37,19 +37,22 @@ export default {
 
 <style scoped>
 .el-container {
-    background-color: #FBFBFB;
+    background-color: #FBF6EB;
 }
 
 .header {
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Ink Free';
+    color: #755447;
 }
 
 .el-main {
-    background-color: #FBFBFB;
+    background-color: #FBF6EB;
 }
 
 .main-background {
-    background: url("../assets/board2.png");
+    background: url("../assets/board4.png");
     background-repeat: no-repeat;
     background-size: 380px 540px;
     float: left;
@@ -57,7 +60,8 @@ export default {
     height: 500px;
     z-index: 1;
     background-position-x: -24px;
-    background-position-y: -20px;
+    background-position-y: -30px;
+    background-color: #FBF6EB;
 }
 
 .main-content {
@@ -65,15 +69,30 @@ export default {
     margin-top: 160px;
     margin-left: 10px;
     color: #3981D3;
-    font-size: 30px;
+    font-size: 28px;
     position: absolute;
     z-index: 200;
+    font-weight: bold;
+    font-family: 'Ink Free';
 }
 
 .content-1 {
     height: 100px;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 100px;
+    font-weight: bold;
+    font-family: 'Ink Free';
+    margin-top: 5px;
+}
+
+.content-2 {
+    height: 100px;
+    font-size: 20px;
+    line-height: 100px;
+    font-weight: bold;
+    font-family: 'Ink Free';
+    position: relative;
+    top: 30px;
 }
 
 .el-input {
@@ -89,10 +108,18 @@ export default {
 
 .button {
     float: right;
+    font-weight: bold;
+    font-family: 'Ink Free';
 }
 
-.el-button--info {
-  background-color: #3981D3;
-  border-color: #3981D3;
+.el-button--mini {
+  font-size: 25px;
+  font-weight: bold; 
+  font-family: 'Ink Free';
+  position: relative;
+  top: 80px;
+  background-color: #FDFBF7;
+  border-width: 2px;
+  border-color: #B69F86;
 }
 </style>

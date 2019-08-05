@@ -7,10 +7,10 @@
             <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jump_Settings()">設定</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text" @click.native="jump_Version()">版本信息</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text" @click.native="jump_AboutUs()">關於我們</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">bug反饋</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jump_Settings()">settings</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">bug report</el-dropdown-item>
             <el-dropdown-item divided class="dropdown-text">cacatea</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -34,23 +34,24 @@
           <img src="../assets/layout-ornament.png" width="300px" height="250px">
         </div>
         <el-button class="main-button-1" @click="jump_Ask()">
-          <span class="main-button-text">規劃專屬</span>
-          <span class="main-button-text">旅行路線</span>
+          <span class="main-button-text">make</span>
+          <span class="main-button-text">your</span>
+          <span class="main-button-text">trip</span>
         </el-button>
         <el-button class="main-button-2" @click="jump_Saved()">
-          <span class="main-button-text">查看</span>
-          <span class="main-button-text">我保存的</span>
-          <span class="main-button-text">路線</span>
+          <span class="main-button-text">my</span>
+          <span class="main-button-text">saved</span>
+          <span class="main-button-text">trip</span>
         </el-button>
       </el-main>
       
       <el-footer :style="{height: 'none', padding: 0}">
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
-          <div class="footer-icon-text-1">主頁</div>
+          <div class="footer-icon-text-1">home</div>
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
-          <div class="footer-icon-text-2">大眾評</div>
+          <div class="footer-icon-text-2">comment</div>
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
-          <div class="footer-icon-text-3">旅行日記</div>
+          <div class="footer-icon-text-3">diary</div>
       </el-footer>
     </el-container>
   </div>
@@ -144,6 +145,8 @@ html,body,#app {
 
 .dropdown-text {
   font-size: 20px;
+  font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .title {
@@ -152,6 +155,8 @@ html,body,#app {
   text-align: center;
   color: #3981D3;
   line-height: 100px;
+  font-family: 'Ink Free';
+  font-weight: bold;
 }
 
 .el-main {
@@ -194,11 +199,13 @@ html,body,#app {
 .main-button-text {
   display: block;
   height: 50px;
-  font-size: 25px;
+  font-size: 28px;
   white-space: normal;
   word-wrap: break-word;
   word-break: break-all;
   color: #3981D3;
+  font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .el-footer {
@@ -221,29 +228,32 @@ html,body,#app {
 
 .footer-icon-text-1 {
   position: absolute;
-  left: 48px;
+  left: 43px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .footer-icon-text-2 {
   position: absolute;
-  left: 162px;
+  left: 150px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .footer-icon-text-3 {
   position: absolute;
-  left: 283px;
+  left: 290px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .el-button--info {

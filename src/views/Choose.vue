@@ -10,9 +10,11 @@
         </el-header>
         <el-container>
             <el-aside :style="{width: 'none'}">
-                <el-button @click="jump_ViewPoints()">景點</el-button>
-                <el-button @click="jump_Restaurants()">餐廳</el-button>
-                <el-button @click="jump_Resorts()">旅店</el-button>
+                <el-tabs tab-position="left">
+                    <el-tab-pane label="景點"></el-tab-pane>
+                    <el-tab-pane label="餐廳"></el-tab-pane>
+                    <el-tab-pane label="飯店"></el-tab-pane>
+                </el-tabs>
             </el-aside>
             <el-main :style="{width: 'none'}">
                 <router-view></router-view>
