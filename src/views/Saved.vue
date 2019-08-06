@@ -1,32 +1,32 @@
 <template>
     <el-container>
         <el-header :style="{height: 'none', padding: 0}">
-            <span class="head">我保存的路線</span>
+            <span class="head">my saved trips</span>
             <img src="../assets/blueflower.png" width="300px" height="95px">
         </el-header>
         <el-main :style="{height: 'none', padding: 0}">
             <div class="preserved">
                 <span class="count">No.1</span>
-                <el-button type="warning" circle>開始</el-button>
+                <el-button type="warning" circle>start</el-button>
             </div>
             <div class="preserved">
                 <span class="count">No.2</span>
-                <el-button type="warning" circle>開始</el-button>
+                <el-button type="warning" circle>start</el-button>
             </div>
             <div class="preserved">
                 <span class="count">No.3</span>
-                <el-button type="warning" circle>開始</el-button>
+                <el-button type="warning" circle>start</el-button>
             </div>
             <div class="preserved">
                 <span class="count">No.4</span>
-                <el-button type="warning" circle>開始</el-button>
+                <el-button type="warning" circle>start</el-button>
             </div>
             <div class="preserved">
                 <span class="count">No.5</span>
-                <el-button type="warning" circle>開始</el-button>
+                <el-button type="warning" circle>start</el-button>
             </div>
             <div class="button">
-                <el-button type="warning" @click="jump_Layout()">返回</el-button>
+                <el-button type="warning" @click="jump_Layout()">Last</el-button>
             </div>
         </el-main>
     </el-container>
@@ -58,6 +58,8 @@ export default {
     font-size: 30px;
     position: relative;
     top: 10px;
+    font-family: 'Ink Free';
+    font-weight: bold;
 }
 
 .preserved {
@@ -73,6 +75,8 @@ export default {
     color: white;
     line-height: 50px;
     margin-left: 5px;
+    font-family: 'Ink Free';
+    font-weight: bold;
 }
 
 .is-circle {
@@ -80,6 +84,7 @@ export default {
     float: right;
     margin-right: 5px;
     font-size: 15px;
+    font-family: 'Ink Free';
 }
 
 .button {
@@ -87,5 +92,10 @@ export default {
     width: 30%;
     position: absolute;
     bottom: 0px;
+}
+
+.el-button {
+    font-family: 'Ink Free';
+    font-weight: bold;
 }
 </style>

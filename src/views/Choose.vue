@@ -3,9 +3,8 @@
         <el-header :style="{height: 'none', padding: 0}">
             <div class="choose-header">
                 <div class="header-part1">
-                    <span class="choose-title">Let's begin</span>
+                    <span class="choose-title">let's begin</span>
                 </div>
-                <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
             </div>
         </el-header>
         <el-container>
@@ -15,6 +14,9 @@
                 <el-button type="primary" @click="jump_Resorts()">hotel</el-button>
             </el-aside>
             <el-main :style="{width: 'none'}">
+                <div class="input">
+                    <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
+                </div>
                 <router-view></router-view>
                 <div class="main-button">
                     <el-button class="main-button-1" type="danger" @click="jump_Ask_1()">Last</el-button>
@@ -55,7 +57,7 @@ export default {
 
 <style scoped>
 .el-header {
-    height: 15%;
+    height: 8%;
     background-color: #FBF6EB;
     color: #755447;
 }
@@ -69,6 +71,11 @@ export default {
     background-color: lightyellow;
     height: 100%;
     padding: 0px;
+}
+
+.input {
+    height: 70px;
+    width: 280px;
 }
 
 .choose-header {
@@ -90,7 +97,8 @@ export default {
 .el-input {
     width: 90%;
     height: 40px;
-    margin-top: -5px;
+    position: relative;
+    top: 14px;
 }
 
 .el-input__inner {
@@ -102,9 +110,12 @@ export default {
 }
 
 .el-button {
+    width: 76px;
     height: 50px;
     margin-top: 20px;
     font-size: 18px;
+    font-family: 'Ink Free';
+    font-weight: bold;
     background-color: #FDECB4;
     border: 0;
     color: #3981D3;
