@@ -45,12 +45,12 @@ export default {
 <style scoped>
 .el-header {
     height: 20%;
-    background-color: green;
+    background-color: #F2E7C8;
 }
 
 .el-main {
     height: 80%;
-    background-color: blue;
+    background-color: #FBF6EB;
 }
 
 .head {
@@ -60,6 +60,7 @@ export default {
     top: 10px;
     font-family: 'Ink Free';
     font-weight: bold;
+    color: #755447;
 }
 
 .preserved {
@@ -72,7 +73,7 @@ export default {
 .count {
     display: block;
     float: left;
-    color: white;
+    color: #755447;
     line-height: 50px;
     margin-left: 5px;
     font-family: 'Ink Free';

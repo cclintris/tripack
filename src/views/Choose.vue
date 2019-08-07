@@ -3,15 +3,15 @@
         <el-header :style="{height: 'none', padding: 0}">
             <div class="choose-header">
                 <div class="header-part1">
-                    <span class="choose-title">let's begin</span>
+                    <span class="choose-title">Let's begin</span>
                 </div>
             </div>
         </el-header>
         <el-container>
             <el-aside :style="{width: 'none'}">
-                <el-button type="primary" @click="jump_ViewPoints()">view</el-button>
-                <el-button type="primary" @click="jump_Restaurants()">dine</el-button>
-                <el-button type="primary" @click="jump_Resorts()">hotel</el-button>
+                <el-button type="primary" style="border: 0" @click="jump_ViewPoints()">view</el-button>
+                <el-button type="primary" style="border: 0" @click="jump_Restaurants()">dine</el-button>
+                <el-button type="primary" style="border: 0" @click="jump_Resorts()">hotel</el-button>
             </el-aside>
             <el-main :style="{width: 'none'}">
                 <div class="input">
@@ -60,15 +60,16 @@ export default {
     height: 8%;
     background-color: #FBF6EB;
     color: #755447;
+    border-bottom: 2px dotted;
 }
 
 .el-aside {
-    background-color: lightyellow;
+    background-color: #FBF6EB;
     width: 25%;
 }
 
 .el-main {
-    background-color: lightyellow;
+    background-color: #FBF6EB;
     height: 100%;
     padding: 0px;
 }
@@ -116,9 +117,8 @@ export default {
     font-size: 18px;
     font-family: 'Ink Free';
     font-weight: bold;
-    background-color: #FDECB4;
-    border: 0;
-    color: #3981D3;
+    background-color: #F8D26A;
+    color: #FF7A00;
 }
 
 .el-button+.el-button {
@@ -142,5 +142,8 @@ export default {
     background-color: #FDECB4;
     font-family: 'Ink Free';
     font-weight: bold;
+    color: #FF7A00;
+    border-width: 2px;
+    border-color: #F9C000;
 }
 </style>

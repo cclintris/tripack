@@ -11,6 +11,7 @@
                     budget<el-input v-model="budget"></el-input>RMB
                 </div>
                 <span class="button">
+                    <el-button size="mini" icon="el-icon-back" class="last-button" @click="jump_Layout()">last</el-button>
                     <el-button size="mini" @click="jump_Ask_1()">next<i class="el-icon-right el-icon--right"></i></el-button>
                 </span>
             </div>        
@@ -30,6 +31,9 @@ export default {
     computed: {
         jump_Ask_1() {
             this.$router.push({path: '/Ask-1'})
+        },
+        jump_Layout() {
+            this.$router.push({path: '/Layout'})
         }
     }
 }
@@ -121,5 +125,10 @@ export default {
   background-color: #FDFBF7;
   border-width: 2px;
   border-color: #B69F86;
+}
+
+.last-button {
+    position: relative;
+    left: -85px;
 }
 </style>
