@@ -6,8 +6,15 @@
                 <i class="el-icon-location"></i>
             </div>
         </el-header>
-        <el-main>
 
+        <el-main>
+          <el-button type="primary">view</el-button>
+          <el-button type="primary">dine</el-button>
+          <el-button type="primary">hotel</el-button>
+          <el-input placeholder="Search" v-model="search" prefix-icon="el-icon-search"></el-input>
+          <div class="main-context">
+            <router-view></router-view>
+          </div>
         </el-main>
 
         <el-footer :style="{height: 'none', padding: 0}">
@@ -23,6 +30,11 @@
 
 <script>
 export default {
+    data() {
+      return {
+        search: ''
+      }
+    },
     computed: {
         jump_Layout() {
             this.$router.push({path: '/Layout'})
@@ -88,6 +100,29 @@ export default {
   line-height: 100px;
   font-family: 'Ink Free';
   font-weight: bold;
+}
+
+.el-main {
+  padding: 0;
+}
+
+.el-input {
+  width: 90%;
+  position: relative;
+  top: 12px;
+}
+
+.main-context {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 20px;
+}
+
+.el-button--primary {
+  font-family: 'Ink Free';
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .el-footer {
