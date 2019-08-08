@@ -11,7 +11,7 @@
             <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">bug report</el-dropdown-item>
-            <el-dropdown-item divided class="dropdown-text">cacatea</el-dropdown-item>
+            <el-dropdown-item divided class="dropdown-text">CaCaZoo</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
         <span class="title">TRIPACK</span>
