@@ -6,10 +6,10 @@
                 <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
             </div>
             <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">設定</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text">版本信息</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text">關於我們</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">bug反饋</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">settings</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text">version</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text">about us</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">feedback</el-dropdown-item>
             </el-dropdown-menu>
             </el-dropdown>
                 <span class="title">TRIPACK</span>
@@ -27,7 +27,7 @@
             </el-dropdown>
         </el-header>
         <el-main>
-            <el-input placeholder="搜搜" v-model="search"></el-input>
+            <el-input placeholder="Search" v-model="search"></el-input>
             <div class="hashtag">
                 hashtag
             </div>
@@ -37,11 +37,11 @@
         </el-main>
         <el-footer :style="{height: 'none', padding: 0}">
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
-          <div class="footer-icon-text-1">主頁</div>
+          <div class="footer-icon-text-1">home</div>
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
-          <div class="footer-icon-text-2">大眾評</div>
+          <div class="footer-icon-text-2">comment</div>
           <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
-          <div class="footer-icon-text-3">旅行日記</div>
+          <div class="footer-icon-text-3">diary</div>
         </el-footer>
     </el-container>
 </template>
@@ -137,28 +137,31 @@ export default {
 
 .footer-icon-text-1 {
   position: absolute;
-  left: 48px;
+  left: 43px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .footer-icon-text-2 {
   position: absolute;
-  left: 162px;
+  left: 150px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 
 .footer-icon-text-3 {
   position: absolute;
-  left: 283px;
+  left: 290px;
   margin-top: 42px;
   color: #FBFBFB;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
+  font-family: 'Ink Free';
 }
 </style>
