@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   components: {
     layout: () => import('./views/Layout.vue')
