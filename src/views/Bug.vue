@@ -1,13 +1,13 @@
 <template>
     <el-container>
         <el-header :style="{height: 'none', padding: 0}">
-            <span class="bug-title">bug report</span>
+            <span class="bug-title">feedback</span>
         </el-header>
 
         <el-main :style="{height: 'none', padding: 0}">
              <img src="../assets/CaCaZoo-cat.png" width="260px" height="73px" class="cat">
              <el-input type="textarea" :autosize="{minRows: 13, maxRows: 15}"
-             placeholder="What bugs do we have?" v-model="textarea2"></el-input>
+             placeholder="Give us some feedback:" v-model="textarea2"></el-input>
         </el-main>
 
         <el-footer :style="{height: 'none', padding: 0}">

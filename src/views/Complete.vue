@@ -65,7 +65,7 @@ export default {
     border-color: salmon; 
     position: relative;
     top: 55px;
-    background-color: lightgreen;
+    background-color: paleturquoise;
 }
 
 .el-button {
