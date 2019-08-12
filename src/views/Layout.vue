@@ -8,10 +8,10 @@
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jump_Settings()">settings</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">feedback</el-dropdown-item>
-            <el-dropdown-item divided class="dropdown-text">CaCaZoo</el-dropdown-item>
+            <el-dropdown-item divided class="dropdown-text">CaCaTea</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
         <span class="title">TRIPACK</span>
@@ -42,6 +42,7 @@
           <span class="main-button-text">my</span>
           <span class="main-button-text">saved</span>
           <span class="main-button-text">trip</span>
+          <img src="../assets/layout-flower-1.png" width="100px" height="110px" class="flower-1">
         </el-button>
       </el-main>
       
@@ -259,5 +260,11 @@ html,body,#app {
 .el-button--info {
   background-color: #3981D3;
   border-color: #3981D3;
+}
+
+.flower-1 {
+  position: absolute;
+  top: 110px;
+  right: -40px;
 }
 </style>

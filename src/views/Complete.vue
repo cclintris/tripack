@@ -94,11 +94,14 @@ export default {
     width: 100%;
     height: 50%;
     border-bottom: salmon dashed;
+    background-color: #DFECF8;
 }
 
 .schedule-down {
     width: 100%;
     height: 50%;
+    background-color: #DFECF8;
+    border-bottom: salmon dashed;
 }
 
 .day {

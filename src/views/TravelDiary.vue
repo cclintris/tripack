@@ -7,9 +7,10 @@
             </div>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">settings</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-bangzhu" class="dropdown-text">version</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-office-building" class="dropdown-text">about us</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text">version</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text">about us</el-dropdown-item>
                 <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">feedback</el-dropdown-item>
+                <el-dropdown-item divided class="dropdown-text">CaCaTea</el-dropdown-item>
             </el-dropdown-menu>
             </el-dropdown>
                 <span class="title">TRIPACK</span>
