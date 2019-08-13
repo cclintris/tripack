@@ -42,7 +42,7 @@
           <span class="main-button-text">my</span>
           <span class="main-button-text">saved</span>
           <span class="main-button-text">trip</span>
-          <img src="../assets/layout-flower-1.png" width="100px" height="110px" class="flower-1">
+          <img src="../assets/layout-flower-1.png" width="85px" height="115px" class="flower-1">
         </el-button>
       </el-main>
       
@@ -62,7 +62,7 @@
 export default {
   computed: {
     jump_Ask() {
-        this.$router.push({path: '/Ask'})
+        this.$router.push({path: '/Loading'})
     },
     jump_Layout() {
         this.$router.push({path: '/Layout'})
@@ -264,7 +264,7 @@ html,body,#app {
 
 .flower-1 {
   position: absolute;
-  top: 110px;
-  right: -40px;
+  top: 105px;
+  right: -25px;
 }
 </style>

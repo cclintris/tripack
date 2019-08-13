@@ -33,7 +33,7 @@ export default new Router({
     {
       path: '/Ask',
       name: 'Ask',
-      component: () => import('./views/Ask.vue')
+      component: () => import('./views/Ask.vue'),
     },
     {
       path: '/Ask-1',
@@ -91,6 +91,11 @@ export default new Router({
       path: '/Bug',
       name: 'Bug',
       component: () => import('./views/Bug.vue')
+    },
+    {
+      path: '/Loading',
+      name: 'Loading',
+      component: () => import('./views/Loading.vue')
     }
   ]
 })
