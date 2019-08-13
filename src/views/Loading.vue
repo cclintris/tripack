@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img src="../assets/layout-ornament.png" width="200px" height="200px">
+        <i class="el-icon-loading"></i>
     </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     },
     methods: {
         afterLoad() {
-            const Time_Count = 2;
+            const Time_Count = 3; //time to change(sec)
             if(!this.timer){
                 this.count = Time_Count;
                 this.show = false;
@@ -39,5 +39,8 @@ export default {
 </script>
 
 <style scoped>
-
+.el-icon-loading {
+    font-size: 50px;
+    color: royalblue;
+}
 </style>
