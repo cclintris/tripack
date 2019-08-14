@@ -37,6 +37,7 @@
           <span class="main-button-text">make</span>
           <span class="main-button-text">your</span>
           <span class="main-button-text">trip</span>
+          <img src="../assets/layout-flower-2.png" width="85px" height="120px" class="flower-2">
         </el-button>
         <el-button class="main-button-2" @click="jump_Saved()">
           <span class="main-button-text">my</span>
@@ -266,5 +267,11 @@ html,body,#app {
   position: absolute;
   top: 105px;
   right: -25px;
+}
+
+.flower-2 {
+  position: absolute;
+  top: -30px;
+  left: -30px;
 }
 </style>
