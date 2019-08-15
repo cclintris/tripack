@@ -35,7 +35,7 @@ export default {
         }
     },
     computed: {
-        // 沒辦法多次點擊?
+        // 沒辦法多次重複點擊?
         jump_ViewPoints() {
             this.$router.push({path: '/ViewPoints'})
         },

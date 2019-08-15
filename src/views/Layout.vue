@@ -31,7 +31,7 @@
       
       <el-main :style="{height: 'none', padding: 0}">
         <div>
-          <img src="../assets/layout-ornament.png" width="300px" height="250px">
+          <img src="../assets/home.png" width="366px" height="240px" class="picture-cat-earth">
         </div>
         <el-button class="main-button-1" @click="jump_Ask()">
           <span class="main-button-text">make</span>
@@ -164,6 +164,11 @@ html,body,#app {
 .el-main {
   height: 75%;
   background-color: #FBFBFB;
+}
+
+.picture-cat-earth {
+  margin-left: 9px;
+  margin-bottom: 10px;
 }
 
 .main-button-1 {
