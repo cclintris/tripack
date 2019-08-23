@@ -31,7 +31,7 @@
       
       <el-main :style="{height: 'none', padding: 0}">
         <div>
-          <img src="../assets/home.png" width="366px" height="240px" class="picture-cat-earth">
+          <img src="../assets/home-2.png" width="375px" height="243px" class="picture-cat-window">
         </div>
         <el-button class="main-button-1" @click="jump_Ask()">
           <span class="main-button-text">make</span>
@@ -166,8 +166,7 @@ html,body,#app {
   background-color: #FBFBFB;
 }
 
-.picture-cat-earth {
-  margin-left: 9px;
+.picture-cat-window {
   margin-bottom: 10px;
 }
 
