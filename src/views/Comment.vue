@@ -35,7 +35,7 @@ export default {
         search: ''
       }
     },
-    computed: {
+    methods: {
         jump_Layout() {
             this.$router.push({path: '/Layout'})
         },

@@ -7,7 +7,7 @@
             <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jump_Settings()">settings</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jumpTo('Settings')">settings</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
             <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">feedback</el-dropdown-item>
@@ -60,10 +60,15 @@
 </template>
 
 <script>
+
 export default {
-  computed: {
+  methods: {
+    jumpTo(target) {
+      this.$router.push({ name: target })
+    },
     jump_Ask() {
         this.$router.push({path: '/Loading'})
+        // this.jumpTo('Loading')
     },
     jump_Layout() {
         this.$router.push({path: '/Layout'})
