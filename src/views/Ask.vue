@@ -1,20 +1,15 @@
 <template>
     <el-container>
-        <el-main>
-            <span class="header">customize your trip</span>
-            <div class="main-background"></div>
-            <div class="main-content">make your trip right now!
-                <div class="content-2">
-                    travel time<el-input v-model="day"></el-input>days<el-input v-model="night"></el-input>nights
-                </div>
-                <div class="content-1">
-                    budget<el-input v-model="budget"></el-input>RMB
-                </div>
-                <span class="button">
-                    <el-button size="mini" icon="el-icon-back" class="last-button" @click="jump_Layout()">last</el-button>
-                    <el-button size="mini" @click="jump_Ask_1()">next<i class="el-icon-right el-icon--right"></i></el-button>
-                </span>
-            </div>        
+        <el-header :style="{height: 'none', padding: 0}">
+            <span class="Ask-title">customize your trip</span>
+        </el-header>
+
+        <el-main :style="{height: 'none', padding: 0}">
+            <img src="../assets/board4.png" width="100%" height="400px">
+            <div class="Ask-buttons">
+                <el-button class="button-1" icon="el-icon-back">last</el-button>
+                <el-button class="button-2">next<i class="el-icon-right el-icon--right"></i></el-button>
+            </div>
         </el-main>
     </el-container>
 </template>
@@ -44,91 +39,34 @@ export default {
     background-color: #FBF6EB;
 }
 
-.header {
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Ink Free';
+.el-header {
+    height: 15%;
+    background-color: #FBF6EB;
+}
+
+.Ask-title {
     color: #755447;
+    font-family: 'Ink Free';
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 100px;
 }
 
 .el-main {
     background-color: #FBF6EB;
 }
 
-.main-background {
-    background: url("../assets/board4.png");
-    background-repeat: no-repeat;
-    background-size: 380px 540px;
+.Ask-buttons {
+    height: 15%;
+    padding: 0 10%;
+}
+
+.button-1 {
     float: left;
-    width: 500px;
-    height: 500px;
-    z-index: 1;
-    background-position-x: -24px;
-    background-position-y: -30px;
-    background-color: #FBF6EB;
+    font-size: 15px;
 }
 
-.main-content {
-    height: 350px;
-    margin-top: 160px;
-    margin-left: 10px;
-    color: #3981D3;
-    font-size: 28px;
-    position: absolute;
-    z-index: 200;
-    font-weight: bold;
-    font-family: 'Ink Free';
-}
-
-.content-1 {
-    height: 100px;
-    font-size: 20px;
-    line-height: 100px;
-    font-weight: bold;
-    font-family: 'Ink Free';
-    margin-top: 5px;
-}
-
-.content-2 {
-    height: 100px;
-    font-size: 20px;
-    line-height: 100px;
-    font-weight: bold;
-    font-family: 'Ink Free';
-    position: relative;
-    top: 30px;
-}
-
-.el-input {
-    height: 25px;
-    width: 50px;
-}
-
-.el-input__inner {
-    height: 25px;
-    width: 40px;
-    padding: 0;
-}
-
-.button {
+.button-2 {
     float: right;
-    font-weight: bold;
-    font-family: 'Ink Free';
-}
-
-.el-button--mini {
-  font-size: 25px;
-  font-weight: bold; 
-  font-family: 'Ink Free';
-  position: relative;
-  top: 80px;
-  background-color: #FDFBF7;
-  border-width: 2px;
-  border-color: #B69F86;
-}
-
-.last-button {
-    position: relative;
-    left: -85px;
 }
 </style>
