@@ -27,7 +27,7 @@ export default {
             textarea2: ''
         }
     },
-    computed: {
+    methods: {
         jump_Layout() {
             this.$router.push({path: '/Layout'})
         }

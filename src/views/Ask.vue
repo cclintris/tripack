@@ -28,7 +28,7 @@ export default {
             budget: ''
         }
     },
-    computed: {
+    methods: {
         jump_Ask_1() {
             this.$router.push({path: '/Ask-1'})
         },
