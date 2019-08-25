@@ -5,7 +5,8 @@
         </el-header>
 
         <el-main :style="{height: 'none', padding: 0}">
-            <img src="../assets/board4.png" width="100%" height="400px">
+            <div class="Ask-background">
+            </div>
             <div class="Ask-buttons">
                 <el-button class="button-1" icon="el-icon-back" @click="jumpTo('Ask')">last</el-button>
             </div>
@@ -29,8 +30,17 @@ export default {
 }
 
 .el-header {
-    height: 15%;
+    height: 10%;
     background-color: #FBF6EB;
+}
+
+.Ask-background {
+    width: 100%;
+    height: 80%;
+    background: url('../assets/cat-board.png');
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    background-position: 60%;
 }
 
 .Ask-title {
