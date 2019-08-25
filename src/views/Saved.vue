@@ -26,7 +26,7 @@
                 <el-button type="warning" circle>start</el-button>
             </div>
             <div class="button">
-                <el-button type="warning" @click="jump_Layout()">Last</el-button>
+                <el-button type="warning" @click="jumpTo('Layout')">Last</el-button>
             </div>
         </el-main>
     </el-container>
@@ -34,9 +34,9 @@
 
 <script>
 export default {
-    computed: {
-        jump_Layout() {
-            this.$router.push({path: '/Layout'})
+    methods: {
+        jumpTo(target) {
+            this.$router.push({name: target})
         }
     }
 }
@@ -57,27 +57,27 @@ export default {
     display: block;
     font-size: 30px;
     position: relative;
-    top: 10px;
+    top: 10%;
     font-family: 'Ink Free';
     font-weight: bold;
     color: #755447;
 }
 
 .preserved {
-    height: 50px;
+    height: 10%;
     width: 100%;
     border-bottom-style: dotted;
     border-color: black;
+    line-height: 100%;
 }
 
 .count {
-    display: block;
     float: left;
     color: #755447;
-    line-height: 50px;
     margin-left: 5px;
     font-family: 'Ink Free';
     font-weight: bold;
+    line-height: 50px;
 }
 
 .is-circle {
@@ -89,10 +89,10 @@ export default {
 }
 
 .button {
-    height: 60px;
-    width: 30%;
     position: absolute;
     bottom: 0px;
+    margin-bottom: 5%;
+    margin-left: 5%;
 }
 
 .el-button {

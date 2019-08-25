@@ -13,8 +13,10 @@
         <el-footer :style="{height: 'none', padding: 0}">
             <img src="../assets/bug-flower-short.png" width="130px" height="200px" class="short-flower">
             <img src="../assets/bug-flower-long.png" width="120px" height="300px" class="long-flower">
-            <el-button class="button-1" @click="jump_Layout()">last</el-button>
-            <el-button class="button-2">commit</el-button>
+            <div class="Bug-buttons">
+                <el-button class="button-1" @click="jumpTo('Layout')">last</el-button>
+                <el-button class="button-2">commit</el-button>
+            </div>
         </el-footer>
     </el-container>
 </template>
@@ -28,8 +30,8 @@ export default {
         }
     },
     methods: {
-        jump_Layout() {
-            this.$router.push({path: '/Layout'})
+        jumpTo(target) {
+            this.$router.push({name: target})
         }
     }
 }
@@ -92,18 +94,21 @@ export default {
     font-weight: bold;
     font-size: 20px;
     width: 100px;
-    margin-top: 15px;
     color: white;
     background-color: darkseagreen;
+    margin-top: 10px;
+}
+
+.Bug-buttons {
+    height: 100%;
+    padding: 0 10%;
 }
 
 .button-1 {
-    position: relative;
-    left: -40px;
+    float: left;
 }
 
 .button-2 {
-    position: relative;
-    right: -40px;
+    float: right;
 }
 </style>

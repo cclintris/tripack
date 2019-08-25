@@ -8,9 +8,9 @@
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jumpTo('Settings')">settings</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text" @click.native="jump_Version()">version</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text" @click.native="jump_AboutUs()">about us</el-dropdown-item>
-            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jump_Bug()">feedback</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text" @click.native="jumpTo('Version')">version</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text" @click.native="jumpTo('AboutUs')">about us</el-dropdown-item>
+            <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jumpTo('Bug')">feedback</el-dropdown-item>
             <el-dropdown-item divided class="dropdown-text">CaCaTea</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -33,13 +33,13 @@
         <div>
           <img src="../assets/home-2.png" width="375px" height="243px" class="picture-cat-window">
         </div>
-        <el-button class="main-button-1" @click="jump_Ask()">
+        <el-button class="main-button-1" @click="jumpTo('Ask')">
           <span class="main-button-text">make</span>
           <span class="main-button-text">your</span>
           <span class="main-button-text">trip</span>
           <img src="../assets/layout-flower-2.png" width="85px" height="120px" class="flower-2">
         </el-button>
-        <el-button class="main-button-2" @click="jump_Saved()">
+        <el-button class="main-button-2" @click="jumpTo('Saved')">
           <span class="main-button-text">my</span>
           <span class="main-button-text">saved</span>
           <span class="main-button-text">trip</span>
@@ -48,11 +48,11 @@
       </el-main>
       
       <el-footer :style="{height: 'none', padding: 0}">
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jumpTo('Layout') "></el-button>
           <div class="footer-icon-text-1">home</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
           <div class="footer-icon-text-2">comment</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
           <div class="footer-icon-text-3">diary</div>
       </el-footer>
     </el-container>
@@ -60,39 +60,10 @@
 </template>
 
 <script>
-
 export default {
   methods: {
     jumpTo(target) {
-      this.$router.push({ name: target })
-    },
-    jump_Ask() {
-        this.$router.push({path: '/Loading'})
-        // this.jumpTo('Loading')
-    },
-    jump_Layout() {
-        this.$router.push({path: '/Layout'})
-    },
-    jump_Comment() {
-        this.$router.push({path: '/Comment'})
-    },
-    jump_TravelDiary() {
-        this.$router.push({path: '/TravelDiary'})
-    },
-    jump_Saved() {
-        this.$router.push({path: '/Saved'})
-    },
-    jump_Settings() {
-        this.$router.push({path: '/Settings'})
-    },
-    jump_Version() {
-        this.$router.push({path: '/Version'})
-    },
-    jump_AboutUs() {
-        this.$router.push({path: '/AboutUs'})
-    },
-    jump_Bug() {
-        this.$router.push({path: '/Bug'})
+      this.$router.push({ name: target})
     }
   }
 }

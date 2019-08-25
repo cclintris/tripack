@@ -1,6 +1,6 @@
 <template>
     <el-container>
-        <el-header :style="{height: '100px', padding: 0}">
+        <el-header :style="{height: 'none', padding: 0}">
             <span class="title">settings</span>
             <el-button  class="title-button" icon="el-icon-back" @click="jump_Layout()"></el-button>
         </el-header>
@@ -50,6 +50,7 @@ export default {
 }
 
 .el-header {
+    height: 15%;
     background-color: cornsilk;
     padding: 0;
     border-bottom: 2px green dashed;
@@ -84,7 +85,7 @@ export default {
 
 .setting-points {
     width: 100%;
-    height: 60px;
+    height: 18%;
     border-bottom: 2px dashed green;
 }
 

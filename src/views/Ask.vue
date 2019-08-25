@@ -7,8 +7,8 @@
         <el-main :style="{height: 'none', padding: 0}">
             <img src="../assets/board4.png" width="100%" height="400px">
             <div class="Ask-buttons">
-                <el-button class="button-1" icon="el-icon-back">last</el-button>
-                <el-button class="button-2">next<i class="el-icon-right el-icon--right"></i></el-button>
+                <el-button class="button-1" icon="el-icon-back" @click="jumpTo('Layout')">last</el-button>
+                <el-button class="button-2" @click="jumpTo('Ask-1')">next<i class="el-icon-right el-icon--right"></i></el-button>
             </div>
         </el-main>
     </el-container>
@@ -24,11 +24,8 @@ export default {
         }
     },
     methods: {
-        jump_Ask_1() {
-            this.$router.push({path: '/Ask-1'})
-        },
-        jump_Layout() {
-            this.$router.push({path: '/Layout'})
+        jumpTo(target) {
+            this.$router.push({name: target})
         }
     }
 }
@@ -57,6 +54,7 @@ export default {
 }
 
 .Ask-buttons {
+    margin-top: 5%;
     height: 15%;
     padding: 0 10%;
 }
@@ -68,5 +66,14 @@ export default {
 
 .button-2 {
     float: right;
+}
+
+.el-button {
+    font-size: 25px;
+    color: black;
+    font-family: 'Ink Free';
+    font-weight: bold;
+    border: 2px solid #B69F86;
+    background-color: #FDFBF7;
 }
 </style>

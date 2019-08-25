@@ -18,11 +18,11 @@
         </el-main>
 
         <el-footer :style="{height: 'none', padding: 0}">
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jump_Layout() "></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jumpTo('Layout')"></el-button>
           <div class="footer-icon-text-1">home</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jump_Comment()"></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
           <div class="footer-icon-text-2">comment</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jump_TravelDiary()"></el-button>
+          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
           <div class="footer-icon-text-3">diary</div>
         </el-footer>
     </el-container>
@@ -36,15 +36,9 @@ export default {
       }
     },
     methods: {
-        jump_Layout() {
-            this.$router.push({path: '/Layout'})
-        },
-        jump_Comment() {
-            this.$router.push({path: '/Comment'})
-        },
-        jump_TravelDiary() {
-            this.$router.push({path: '/TravelDiary'})
-        }
+      jumpTo(target) {
+        this.$router.push({name: target})
+      }
     }
 }
 </script>
@@ -84,8 +78,8 @@ export default {
   line-height: 100%;
   font-size: 40px;
   position: absolute;
-  top: 28px;
-  right: 10px;
+  top: 4%;
+  right: 3%;
 }
 
 .el-icon-location {
@@ -114,9 +108,8 @@ export default {
 
 .main-context {
   width: 100%;
-  height: 400px;
-  position: relative;
-  top: 20px;
+  margin-top: 5%;
+  height: 80%;
 }
 
 .el-button--primary {
