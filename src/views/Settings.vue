@@ -2,7 +2,7 @@
     <el-container>
         <el-header :style="{height: 'none', padding: 0}">
             <span class="title">settings</span>
-            <el-button  class="title-button" icon="el-icon-back" @click="jump_Layout()"></el-button>
+            <el-button  class="title-button" icon="el-icon-back" @click="jumpTo('Layout')"></el-button>
         </el-header>
 
         <el-main :style="{height: 'none', padding: 0}">
@@ -36,9 +36,9 @@
 
 <script>
 export default {
-    computed: {
-        jump_Layout() {
-            this.$router.push({path: '/Layout'})
+    methods: {
+        jumpTo(target) {
+            this.$router.push({name: target})
         }
     }
 }
@@ -76,8 +76,8 @@ export default {
     font-size: 35px;
     padding: 0;
     position: absolute;
-    top: 34px;
-    left: 25px;
+    top: 5%;
+    left: 7%;
     background-color: cornsilk;
     border: 0;
     color: orange;
@@ -87,24 +87,25 @@ export default {
     width: 100%;
     height: 18%;
     border-bottom: 2px dashed green;
+    line-height: 400%;
+    padding-left: 3%;
 }
 
 .setting-text {
     float: left;
     display: block;
-    line-height: 60px;
-    margin-left: 5px;
-    font-size: 20px;
+    font-size:  20px;
     font-family: 'Ink Free';
     font-weight: bold;
     color:orange;
+    height: 100%;
 }
 
 .points-button {
     float: right;
     display: block;
-    font-size: 20px;
-    margin-top: 8px;
+    font-size: 15px;
+    margin-top: 3%;
     border: 0;
     color: lightseagreen;
     font-weight: bold;

@@ -4,7 +4,7 @@
       <el-header :style="{height: 'none', padding: 0}">
         <el-dropdown trigger="click" class="setting">
           <div class="header-setting">
-            <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
+            <i style="font-size: 30px; line-height: 300%; color:#3981D3" class="el-icon-more"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jumpTo('Settings')">settings</el-dropdown-item>
@@ -17,7 +17,7 @@
         <span class="title">TRIPACK</span>
         <el-dropdown trigger="click" class="info">
           <div class="header-setting">
-            <i style="font-size: 30px; line-height: 100px; color: #3981D3" class="el-icon-picture-outline-round"></i>
+            <i style="font-size: 30px; line-height: 300%; color: #3981D3" class="el-icon-picture-outline-round"></i>
           </div>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
@@ -31,19 +31,19 @@
       
       <el-main :style="{height: 'none', padding: 0}">
         <div>
-          <img src="../assets/home-2.png" width="375px" height="243px" class="picture-cat-window">
+          <img src="../assets/home-2.png" width="100%" height="20%">
         </div>
         <el-button class="main-button-1" @click="jumpTo('Ask')">
           <span class="main-button-text">make</span>
           <span class="main-button-text">your</span>
           <span class="main-button-text">trip</span>
-          <img src="../assets/layout-flower-2.png" width="85px" height="120px" class="flower-2">
+          <img src="../assets/layout-flower-2.png" width="65%" height="70%" class="flower-2">
         </el-button>
         <el-button class="main-button-2" @click="jumpTo('Saved')">
           <span class="main-button-text">my</span>
           <span class="main-button-text">saved</span>
           <span class="main-button-text">trip</span>
-          <img src="../assets/layout-flower-1.png" width="85px" height="115px" class="flower-1">
+          <img src="../assets/layout-flower-1.png" width="65%" height="70%" class="flower-1">
         </el-button>
       </el-main>
       
@@ -99,7 +99,7 @@ html,body,#app {
 .el-header .setting {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -2%;
   width: 20%;
   height: 7.5%;
   color: #FBFBFB;
@@ -142,20 +142,15 @@ html,body,#app {
   background-color: #FBFBFB;
 }
 
-.picture-cat-window {
-  margin-bottom: 10px;
-}
-
 .main-button-1 {
-  height: 200px;
-  width: 150px;
+  height: 40%;
+  width: 40%;
   background-color: #F7DD7D;
   float: left;
   position: relative;
-  left: 25px;
-  top: 20px;
-  margin-bottom: 20px;
-  margin-right: 17px;
+  left: 7%;
+  top: 5%;
+  margin-right: 5%;
   border-style: solid;
   border-width: 2px;
   border-color: white;
@@ -163,15 +158,13 @@ html,body,#app {
 }
 
 .main-button-2 {
-  height: 200px;
-  width: 150px;
+  height: 40%;
+  width: 40%;
   background-color: #DFECFB;
   float: left;
   position: relative;
-  left: 25px;
-  top: 20px;
-  margin-bottom: 20px;
-  margin-right: 17px;
+  right: -5%;
+  top: 5%;
   border-style: solid;
   border-width: 2px;
   border-color: white;
@@ -180,7 +173,7 @@ html,body,#app {
 
 .main-button-text {
   display: block;
-  height: 50px;
+  height: 30%;
   font-size: 28px;
   white-space: normal;
   word-wrap: break-word;
@@ -245,13 +238,13 @@ html,body,#app {
 
 .flower-1 {
   position: absolute;
-  top: 105px;
-  right: -25px;
+  top: 50%;
+  right: -25%;
 }
 
 .flower-2 {
   position: absolute;
-  top: -30px;
-  left: -30px;
+  top: -23%;
+  left: -20%;
 }
 </style>

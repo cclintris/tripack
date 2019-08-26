@@ -61,6 +61,7 @@ export default {
 .el-header {
     height: 10%;
     background-color: #FBF6EB;
+    line-height: 500%;
 }
 
 .Ask-title {
@@ -68,7 +69,6 @@ export default {
     font-family: 'Ink Free';
     font-weight: bold;
     font-size: 35px;
-    line-height: 100px;
 }
 
 .el-main {
