@@ -8,9 +8,9 @@
         </el-header>
 
         <el-main>
-          <el-button type="primary">view</el-button>
-          <el-button type="primary">dine</el-button>
-          <el-button type="primary">hotel</el-button>
+          <el-button type="success" class="category-button">view</el-button>
+          <el-button type="success" class="category-button">dine</el-button>
+          <el-button type="success" class="category-button">hotel</el-button>
           <el-input placeholder="Search" v-model="search" prefix-icon="el-icon-search"></el-input>
           <div class="main-context">
             <router-view></router-view>
@@ -18,12 +18,18 @@
         </el-main>
 
         <el-footer :style="{height: 'none', padding: 0}">
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jumpTo('Layout')"></el-button>
-          <div class="footer-icon-text-1">home</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
-          <div class="footer-icon-text-2">comment</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
-          <div class="footer-icon-text-3">diary</div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-house" @click="jumpTo('Layout')"></el-button>
+           <div class="Layout-buttons-text">home</div>
+           </div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
+           <div class="Layout-buttons-text">comment</div>
+           </div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
+           <div class="Layout-buttons-text">diary</div>
+           </div>
         </el-footer>
     </el-container>
 </template>
@@ -84,6 +90,7 @@ export default {
 
 .el-icon-location {
     color: orange;
+    margin-left: 20%;
 }
 
 .title {
@@ -102,20 +109,20 @@ export default {
 
 .el-input {
   width: 90%;
-  position: relative;
-  top: 12px;
 }
 
 .main-context {
-  width: 100%;
-  margin-top: 5%;
-  height: 80%;
+  height: 77%;
+  margin-top: 2%;
 }
 
-.el-button--primary {
+.category-button {
+  font-size: 15px;
   font-family: 'Ink Free';
   font-weight: bold;
-  font-size: 18px;
+  background-color: skyblue;
+  border-color: skyblue;
+  margin-bottom: 3%;
 }
 
 .el-footer {
@@ -124,45 +131,23 @@ export default {
     padding: 0;
 }
 
-.el-icon-house {
-  font-size: 36px;
+.Layout-buttons {
+  width: 33.3%;
+  float: left;
 }
 
-.el-icon-medal-1 {
-  font-size: 36px;
-}
-
-.el-icon-notebook-1 {
-  font-size: 36px;
-}
-
-.footer-icon-text-1 {
-  position: absolute;
-  left: 43px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
+.Layout-buttons-text {
   font-family: 'Ink Free';
+  font-weight: bold;
+  color: #FBFBFB;
+  font-size: 15px;
 }
 
-.footer-icon-text-2 {
-  position: absolute;
-  left: 150px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Ink Free';
-}
-
-.footer-icon-text-3 {
-  position: absolute;
-  left: 290px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Ink Free';
+.el-button--primary {
+  background-color: #3981D3;
+  border: none;
+  font-size: 35px;
+  padding: 0;
+  margin-top: 3%;
 }
 </style>

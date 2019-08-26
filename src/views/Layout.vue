@@ -43,17 +43,23 @@
           <span class="main-button-text">my</span>
           <span class="main-button-text">saved</span>
           <span class="main-button-text">trip</span>
-          <img src="../assets/layout-flower-1.png" width="65%" height="70%" class="flower-1">
+          <img src="../assets/layout-flower-1.png" width="60%" height="70%" class="flower-1">
         </el-button>
       </el-main>
       
       <el-footer :style="{height: 'none', padding: 0}">
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jumpTo('Layout') "></el-button>
-          <div class="footer-icon-text-1">home</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
-          <div class="footer-icon-text-2">comment</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
-          <div class="footer-icon-text-3">diary</div>
+        <div class="Layout-buttons">
+          <el-button type="primary" icon="el-icon-house" @click="jumpTo('Layout')"></el-button>
+          <div class="Layout-buttons-text">home</div>
+        </div>
+        <div class="Layout-buttons">
+           <el-button type="primary" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
+           <div class="Layout-buttons-text">comment</div>
+        </div>
+        <div class="Layout-buttons">
+           <el-button type="primary" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
+           <div class="Layout-buttons-text">diary</div>
+        </div>
       </el-footer>
     </el-container>
   </div>
@@ -189,57 +195,30 @@ html,body,#app {
     padding: 0;
 }
 
-.el-icon-house {
-  font-size: 36px;
+.Layout-buttons {
+  width: 33.3%;
+  float: left;
 }
 
-.el-icon-medal-1 {
-  font-size: 36px;
-}
-
-.el-icon-notebook-1 {
-  font-size: 36px;
-}
-
-.footer-icon-text-1 {
-  position: absolute;
-  left: 43px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
+.Layout-buttons-text {
   font-family: 'Ink Free';
-}
-
-.footer-icon-text-2 {
-  position: absolute;
-  left: 150px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
   font-weight: bold;
-  font-family: 'Ink Free';
-}
-
-.footer-icon-text-3 {
-  position: absolute;
-  left: 290px;
-  margin-top: 42px;
   color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Ink Free';
+  font-size: 15px;
 }
 
-.el-button--info {
+.el-button--primary {
   background-color: #3981D3;
-  border-color: #3981D3;
+  border: none;
+  font-size: 35px;
+  padding: 0;
+  margin-top: 3%;
 }
 
 .flower-1 {
   position: absolute;
-  top: 50%;
-  right: -25%;
+  top: 40%;
+  right: -19.5%;
 }
 
 .flower-2 {

@@ -6,10 +6,10 @@
                 <i style="font-size: 30px; line-height: 100px; color:#3981D3" class="el-icon-more"></i>
             </div>
             <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text">settings</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text">version</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text">about us</el-dropdown-item>
-                <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text">feedback</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-setting" class="dropdown-text" @click.native="jumpTo('Settings')">settings</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-s-opportunity" class="dropdown-text" @click.native="jumpTo('Version')">version</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-s-custom" class="dropdown-text" @click.native="jumpTo('AboutUs')">about us</el-dropdown-item>
+                <el-dropdown-item divided icon="el-icon-chat-line-round" class="dropdown-text" @click.native="jumpTo('Bug')">feedback</el-dropdown-item>
                 <el-dropdown-item divided class="dropdown-text">CaCaTea</el-dropdown-item>
             </el-dropdown-menu>
             </el-dropdown>
@@ -37,12 +37,18 @@
             </div>
         </el-main>
         <el-footer :style="{height: 'none', padding: 0}">
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 33px'}" type="info" icon="el-icon-house" @click="jumpTo('Layout') "></el-button>
-          <div class="footer-icon-text-1">home</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 30px 0 45px'}" type="info" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
-          <div class="footer-icon-text-2">comment</div>
-          <el-button :style="{padding: '5px 10px', float: 'left', margin: '0 18px 0 40px'}" type="info" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
-          <div class="footer-icon-text-3">diary</div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-house" @click="jumpTo('Layout')"></el-button>
+           <div class="Layout-buttons-text">home</div>
+           </div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-medal-1" @click="jumpTo('Comment')"></el-button>
+           <div class="Layout-buttons-text">comment</div>
+           </div>
+           <div class="Layout-buttons">
+              <el-button type="primary" icon="el-icon-notebook-1" @click="jumpTo('TravelDiary')"></el-button>
+           <div class="Layout-buttons-text">diary</div>
+           </div>
         </el-footer>
     </el-container>
 </template>
@@ -109,7 +115,7 @@ export default {
 }
 
 .blog {
-    height: 77%;
+    height: 75%;
 }
 
 .el-footer {
@@ -118,45 +124,23 @@ export default {
     padding: 0;
 }
 
-.el-icon-house {
-  font-size: 36px;
+.Layout-buttons {
+  width: 33.3%;
+  float: left;
 }
 
-.el-icon-medal-1 {
-  font-size: 36px;
-}
-
-.el-icon-notebook-1 {
-  font-size: 36px;
-}
-
-.footer-icon-text-1 {
-  position: absolute;
-  left: 43px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
+.Layout-buttons-text {
   font-family: 'Ink Free';
+  font-weight: bold;
+  color: #FBFBFB;
+  font-size: 15px;
 }
 
-.footer-icon-text-2 {
-  position: absolute;
-  left: 150px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Ink Free';
-}
-
-.footer-icon-text-3 {
-  position: absolute;
-  left: 290px;
-  margin-top: 42px;
-  color: #FBFBFB;
-  font-size: 18px;
-  font-weight: bold;
-  font-family: 'Ink Free';
+.el-button--primary {
+  background-color: #3981D3;
+  border: none;
+  font-size: 35px;
+  padding: 0;
+  margin-top: 3%;
 }
 </style>
