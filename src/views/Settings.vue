@@ -88,7 +88,6 @@ export default {
     height: 18%;
     border-bottom: 2px dashed green;
     line-height: 400%;
-    padding-left: 3%;
 }
 
 .setting-text {

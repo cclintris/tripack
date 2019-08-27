@@ -2,7 +2,7 @@
     <el-container>
         <el-header :style="{height: 'none', padding: 0}">
             <span class="head">my saved trips</span>
-            <img src="../assets/blueflower.png" width="300px" height="95px">
+            <img src="../assets/blueflower.png" width="80%" height="70%">
         </el-header>
         <el-main :style="{height: 'none', padding: 0}">
             <div class="preserved">
@@ -74,17 +74,15 @@ export default {
 .count {
     float: left;
     color: #755447;
-    margin-left: 5px;
     font-family: 'Ink Free';
     font-weight: bold;
-    line-height: 50px;
+    line-height: 250%;
 }
 
 .is-circle {
-    margin-top: 4.5px;
     float: right;
-    margin-right: 5px;
-    font-size: 15px;
+    margin: 2% 1% 0 0;
+    font-size: 12px;
     font-family: 'Ink Free';
 }
 

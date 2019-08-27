@@ -104,7 +104,7 @@ export default {
     padding: 30% 9% 9%;
     font-family: 'Ink Free';
     font-weight: bold;
-    color: royalblue;
+    color: #755447;
 }
 
 .text-1 {
