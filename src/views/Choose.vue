@@ -9,20 +9,22 @@
         </el-header>
         <el-container>
             <el-aside :style="{width: 'none'}">
-                <el-button type="primary" style="border: 0" @click="jump_ViewPoints()">view</el-button>
-                <el-button type="primary" style="border: 0" @click="jump_Restaurants()">dine</el-button>
-                <el-button type="primary" style="border: 0" @click="jump_Resorts()">hotel</el-button>
+                <el-button type="primary" style="border: 0" @click="jumpTo('ViewPoints')">view</el-button>
+                <el-button type="primary" style="border: 0" @click="jumpTo('Restaurants')">dine</el-button>
+                <el-button type="primary" style="border: 0" @click="jumpTo('Resorts')">hotel</el-button>
             </el-aside>
-            <el-main :style="{width: 'none'}">
-                <div class="input">
-                    <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
-                </div>
-                <router-view></router-view>
-                <div class="main-button">
-                    <el-button class="main-button-1" type="danger" @click="jump_Ask_1()">Last</el-button>
-                    <el-button class="main-button-1" type="danger" @click="jump_Complete()">Done</el-button>
-                </div>
-            </el-main>
+            <el-container>
+                <el-main :style="{width: 'none'}">
+                    <div class="input">
+                        <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
+                    </div>
+                        <router-view></router-view>
+                    <el-footer>
+                        <el-button class="main-button-1" @click="jumpTo('Ask-1')">last</el-button>
+                        <el-button class="main-button-2" @click="jumpTo('Complete')">done</el-button>
+                    </el-footer>
+                </el-main>
+            </el-container>
         </el-container>
     </el-container>
 </template>
@@ -35,21 +37,8 @@ export default {
         }
     },
     methods: {
-        // 沒辦法多次重複點擊?
-        jump_ViewPoints() {
-            this.$router.push({path: '/ViewPoints'})
-        },
-        jump_Restaurants() {
-            this.$router.push({path: '/Restaurants'})
-        },
-        jump_Resorts() {
-            this.$router.push({path: '/Resorts'})
-        },
-        jump_Ask_1() {
-            this.$router.push({path: '/Ask-1'})
-        },
-        jump_Complete() {
-            this.$router.push({path: '/Complete'})
+        jumpTo(target) {
+            this.$router.push({name: target})
         }
     }
 }
@@ -72,11 +61,20 @@ export default {
     background-color: #FBF6EB;
     height: 100%;
     padding: 0px;
+    width: 75%;
+}
+
+.el-footer {
+    background-color: #FBF6EB;
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+    padding: 0 10%;
 }
 
 .input {
-    height: 70px;
-    width: 280px;
+    height: 11%;
+    width: 100%;
 }
 
 .choose-header {
@@ -89,7 +87,7 @@ export default {
 
 .choose-title {
     display: block;
-    margin-top: 5px;
+    margin-top: 2%;
     font-size: 30px;
     font-family: 'Ink Free';
     font-weight: bold;
@@ -97,13 +95,12 @@ export default {
 
 .el-input {
     width: 90%;
-    height: 40px;
-    position: relative;
     top: 14px;
 }
 
 .el-input__inner {
     width: 90%;
+    font-size: 15px;
 }
 
 .el-input__icon {
@@ -128,14 +125,12 @@ export default {
 .main-button {
     height: 60px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
 }
 
 .main-button-1 {
     width: 80px;
     height: 30px;
-    margin: -5px 20px 0 28px;
+    margin: 0;
     padding: 0;
     font-size: 15px;
     white-space: nowrap;
@@ -145,5 +140,22 @@ export default {
     color: #FF7A00;
     border-width: 2px;
     border-color: #F9C000;
+    float: left;
+}
+
+.main-button-2 {
+    width: 80px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    white-space: nowrap;
+    background-color: #FDECB4;
+    font-family: 'Ink Free';
+    font-weight: bold;
+    color: #FF7A00;
+    border-width: 2px;
+    border-color: #F9C000;
+    float: right;
 }
 </style>

@@ -10,8 +10,8 @@
                     <span class="Ask-1-ques">Any</span>
                     <span class="Ask-1-ques">attractions/restaurants/hotels</span>
                     <span class="Ask-1-ques">in mind?</span>
-                    <el-button class="button-2">Yes</el-button>
-                    <el-button class="button-3">No</el-button>
+                    <el-button class="button-2" @click="jumpTo('Choose')">Yes</el-button>
+                    <el-button class="button-3" @click="jumpTo('Complete')">No</el-button>
                 </div>
             </div>
             <div class="Ask-buttons">
@@ -101,11 +101,13 @@ export default {
     position: absolute;
     left: 20%;
     top: 50%;
+    background-color: skyblue;
 }
 
 .button-3 {
     position: absolute;
     right: 20%;
     top: 50%;
+    background-color: skyblue;
 }
 </style>
