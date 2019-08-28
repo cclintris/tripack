@@ -18,7 +18,7 @@
                     <div class="input">
                         <el-input placeholder="Search" prefix-icon="el-icon-search" v-model="search"></el-input>
                     </div>
-                        <router-view></router-view>
+                    <router-view></router-view>
                     <el-footer>
                         <el-button class="main-button-1" @click="jumpTo('Ask-1')">last</el-button>
                         <el-button class="main-button-2" @click="jumpTo('Complete')">done</el-button>
