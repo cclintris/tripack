@@ -12,6 +12,9 @@
                 <el-button type="primary" style="border: 0" @click="jumpTo('ViewPoints')">view</el-button>
                 <el-button type="primary" style="border: 0" @click="jumpTo('Restaurants')">dine</el-button>
                 <el-button type="primary" style="border: 0" @click="jumpTo('Resorts')">hotel</el-button>
+                <div class="fox-pic">
+                    <img src="../assets/fox.png" width="90%" height="60%">
+                </div>
             </el-aside>
             <el-container>
                 <el-main :style="{width: 'none'}">
@@ -70,6 +73,7 @@ export default {
     bottom: 0;
     width: 75%;
     padding: 0 10%;
+    z-index: 99;
 }
 
 .input {
@@ -128,8 +132,7 @@ export default {
 }
 
 .main-button-1 {
-    width: 80px;
-    height: 30px;
+    height: 40%;
     margin: 0;
     padding: 0;
     font-size: 15px;
@@ -144,8 +147,7 @@ export default {
 }
 
 .main-button-2 {
-    width: 80px;
-    height: 30px;
+    height: 40%;
     margin: 0;
     padding: 0;
     font-size: 15px;
@@ -157,5 +159,13 @@ export default {
     border-width: 2px;
     border-color: #F9C000;
     float: right;
+}
+
+.fox-pic {
+    position: absolute;
+    bottom: 0;
+    height: 55%;
+    width: 25%;
+    z-index: 100;
 }
 </style>
