@@ -11,11 +11,6 @@ export default new Router({
       component: () => import('./views/Layout.vue')
     },
     {
-      path: '/CustomerService',
-      name: 'CustomerService',
-      component: () => import('./views/CustomerService.vue')
-    },
-    {
       path: '/TravelDiary',
       name: 'TravelDiary',
       component: () => import('./views/TravelDiary.vue')
@@ -39,6 +34,11 @@ export default new Router({
       path: '/Ask-1',
       name: 'Ask-1',
       component: () => import('./views/Ask-1.vue')
+    },
+    {
+      path: 'Plans',
+      name: 'Plans',
+      component: () => import('./views/Plans.vue')
     },
     {
       path: '/Choose',

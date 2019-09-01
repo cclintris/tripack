@@ -24,7 +24,7 @@
                     <router-view></router-view>
                     <el-footer>
                         <el-button class="main-button-1" @click="jumpTo('Ask-1')">last</el-button>
-                        <el-button class="main-button-2" @click="jumpTo('Complete')">done</el-button>
+                        <el-button class="main-button-2" @click="jumpTo('Plans')">done</el-button>
                     </el-footer>
                 </el-main>
             </el-container>
