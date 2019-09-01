@@ -132,32 +132,32 @@ export default {
 }
 
 .main-button-1 {
-    height: 40%;
+    height: 60%;
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 18px;
     white-space: nowrap;
-    background-color: #FDECB4;
+    background-color: darkseagreen;
     font-family: 'Ink Free';
     font-weight: bold;
-    color: #FF7A00;
+    color: white;
     border-width: 2px;
-    border-color: #F9C000;
+    border-color: white;
     float: left;
 }
 
 .main-button-2 {
-    height: 40%;
+    height: 60%;
     margin: 0;
     padding: 0;
-    font-size: 15px;
+    font-size: 18px;
     white-space: nowrap;
-    background-color: #FDECB4;
+    background-color: darkseagreen;
     font-family: 'Ink Free';
     font-weight: bold;
-    color: #FF7A00;
+    color: white;
     border-width: 2px;
-    border-color: #F9C000;
+    border-color: white;
     float: right;
 }
 

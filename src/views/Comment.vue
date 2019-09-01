@@ -117,7 +117,7 @@ export default {
 }
 
 .category-button {
-  font-size: 15px;
+  font-size: 18px;
   font-family: 'Ink Free';
   font-weight: bold;
   background-color: skyblue;

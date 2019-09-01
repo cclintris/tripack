@@ -80,7 +80,7 @@ export default {
 
 .Ask-1-ques {
     display: block;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .button-1 {
@@ -93,7 +93,7 @@ export default {
     color: black;
     font-family: 'Ink Free';
     font-weight: bold;
-    border: 2px solid #B69F86;
+    border: 2px solid #EA9300;
     background-color: #FDFBF7;
 }
 
@@ -101,13 +101,13 @@ export default {
     position: absolute;
     left: 20%;
     top: 50%;
-    background-color: skyblue;
+    border-color: #755447;
 }
 
 .button-3 {
     position: absolute;
     right: 20%;
     top: 50%;
-    background-color: skyblue;
+    border-color: #755447;
 }
 </style>

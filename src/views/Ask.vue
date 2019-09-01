@@ -95,7 +95,7 @@ export default {
     color: black;
     font-family: 'Ink Free';
     font-weight: bold;
-    border: 2px solid #B69F86;
+    border: 2px solid #EA9300;
     background-color: #FDFBF7;
 }
 
@@ -109,10 +109,11 @@ export default {
 
 .text-1 {
     display: block;
-    font-size: 35px;
+    font-size: 38px;
     margin-top: 10%;
     margin-left: 10%;
     margin-bottom: 10%;
+    color: #EA9300;
 }
 
 .text-2 {

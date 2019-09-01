@@ -36,13 +36,13 @@ export default {
 .el-header {
     height: 15%;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: cornsilk;
 }
 
 .el-main {
     height: 65%;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: cornsilk;
     padding: 10% 0;
 }
 
@@ -50,13 +50,13 @@ export default {
     height: 20%;
     width: 100%;
     padding: 5% 15%;
-    background-color: blanchedalmond;
+    background-color: cornsilk;
 }
 
 .title-ready {
     display: block;
     text-align: center;
-    color: royalblue;
+    color: olivedrab;
     font-family: 'Ink Free';
     font-weight: bold;
     font-size: 40px;
@@ -68,8 +68,8 @@ export default {
     width: 80%;
     margin: 0 auto;
     border-style: dashed;
-    border-color: salmon; 
-    background-color: paleturquoise;
+    border-color: #EAB000; 
+    background-color: bisque;
 }
 
 .el-button {
@@ -82,6 +82,7 @@ export default {
     width: 30%;
     height: 50%;
     font-size: 20px;
+    background-color: darkseagreen;
 }
 
 .button-more {
@@ -95,15 +96,15 @@ export default {
 .schedule {
     width: 100%;
     height: 50%;
-    border-bottom: salmon dashed;
-    background-color: #DFECF8;
+    border-bottom: #EAB000 dashed;
+    background-color: seashell;
 }
 
 .schedule-down {
     width: 100%;
     height: 50%;
-    background-color: #DFECF8;
-    border-bottom: salmon dashed;
+    background-color: seashell;
+    border-bottom:#EAB000 dashed;
 }
 
 .day {
@@ -113,6 +114,6 @@ export default {
     font-family: 'Ink Free';
     font-weight: bold;
     font-size: 25px;
-    color: royalblue;
+    color: #EA9300;
 }
 </style>
