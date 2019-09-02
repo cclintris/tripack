@@ -137,7 +137,7 @@ export default {
     padding: 0;
     font-size: 18px;
     white-space: nowrap;
-    background-color: darkseagreen;
+    background-color: #67C23A;
     font-family: 'Ink Free';
     font-weight: bold;
     color: white;
@@ -152,7 +152,7 @@ export default {
     padding: 0;
     font-size: 18px;
     white-space: nowrap;
-    background-color: darkseagreen;
+    background-color: #67C23A;
     font-family: 'Ink Free';
     font-weight: bold;
     color: white;
